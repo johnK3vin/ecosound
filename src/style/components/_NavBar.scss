@@ -1,0 +1,36 @@
+@import './global';
+
+
+.navList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10rem;
+    padding: 1rem;
+    background-color: $color_backgraund1;
+    color: $color_1;
+
+    div{
+        margin: 1rem;
+        a {
+            color: $color_1;
+            font-size: 4rem;
+            text-decoration: none;
+            text-shadow: 0 1px 1px black;
+        }
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        font-size: 3rem;
+        text-shadow: 0 1px 1px black;
+        a {
+            margin: 1rem;
+            text-decoration: none;
+            color: $color_1;
+            &:hover {
+                color: $color_3;
+            }
+        }
+    }
+}

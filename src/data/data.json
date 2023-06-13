@@ -1,0 +1,73 @@
+
+[
+    {
+        "id" : "1" ,
+        "type": "audifonoInalambrico",
+        "name" : "Lenovo GM2 Pro",
+        "price": "11.990",
+        "img": "../../src/assets/lenovoGm2.jpg"
+    },
+    {
+        "id" : "2" ,
+        "type": "audifonoInalambrico",
+        "name" : "ACEFAST T8",
+        "price": "55.990",
+        "img": "../../src/assets/acefastT8.jpg"
+    },
+    {
+        "id" : "3" ,
+        "type": "audifonoInalambrico",
+        "name" : "JBL T280",
+        "price": "24.990",
+        "img" : "../../src/assets/jbltws.jpg"
+    },
+    {
+        "id" : "4" ,
+        "type": "audifonoInalambrico",
+        "name" : "X15 TWS",
+        "price": "9.990",
+        "img": "../../src/assets/TWSX15.jpg"
+    },
+    {
+        "id" : "5" ,
+        "type": "audifonoInalambrico",
+        "name" : "G11 TWS",
+        "price": "11.990",
+        "img": "../../src/assets/G11TWS.jpg"
+    },
+    {
+        "id" : "6" ,
+        "type": "audifonoProfessional",
+        "name" : "Beyerdynamic DT 770 Pro",
+        "price": "226.000",
+        "img": "../../src/assets/Beyerdynam.jpg"
+    },
+    {
+        "id" : "7" ,
+        "type": "audifonoProfessional",
+        "name" : "Alctron He360",
+        "price": "150.000",
+        "img" : "../../src/assets/alctronHe360.jpg"
+    },
+    {
+        "id" : "8" ,
+        "type": "audifonoProfessional",
+        "name" : "Akg K72",
+        "price": "170.000",
+        "img": "../../src/assets/akgK72.jpg"
+    },
+    {
+        "id" : "9" ,
+        "type": "audifonoProfessional",
+        "name" : "Sennheiser HD 650",
+        "price": "226.000",
+        "img" : "../../src/assets/SennheiserHD650.jpg"
+    },
+    {
+        "id" : "10" ,
+        "type": "audifonoProfessional",
+        "name" : "Sony 7506 IMG1",
+        "price": "195.000",
+        "img": "../../src/assets/SONY7506IMG1.jpg"
+    }
+]
