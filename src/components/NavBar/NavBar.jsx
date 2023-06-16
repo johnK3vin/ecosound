@@ -5,13 +5,15 @@ import CarWitget from "../CarWitget/CarWitget";
 const NavBar = () => {
     return (
         <nav className="navList">
-            <div>
-                <Link to='/'>EcoSound</Link>
+            <div className="navLogo">
+                <Link to='/'>
+                    <img src="./logo/eco-sound.png" alt="" />
+                </Link>
             </div>
             <ul>
-                <Link to="/">Home</Link>
-                <Link to="/collection">Collection</Link>
-                <Link to="/contact">Contact</Link>
+                <Link to="/">Inicio</Link>
+                <Link to="/collection">Coleccion</Link>
+                <Link to="/contact">Contacto</Link>
             </ul>
             <CarWitget/>
         </nav>

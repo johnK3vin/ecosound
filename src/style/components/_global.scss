@@ -2,8 +2,12 @@ $color_1: white;
 $color_2: red;
 $color_3: #D8C4B6;
 $color_4: black;
+$color_5: green;
 $color_backgraund1: #213555;
 $color_backgraund2: #F5EFE7;
+$color_backgraund3: #19A7CE;
+$color_backgraund4: #AFD3E2;
+$color_backgraund5: #4F709C;
 
 * {
     margin: 0;
@@ -15,4 +19,8 @@ $color_backgraund2: #F5EFE7;
 html {
     min-height: 100%;
     position: relative;
+}
+
+body {
+    background-color: $color_backgraund2;
 }

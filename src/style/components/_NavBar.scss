@@ -10,15 +10,13 @@
     background-color: $color_backgraund1;
     color: $color_1;
 
-    div{
+    .navLogo {
         margin: 1rem;
-        a {
-            color: $color_1;
-            font-size: 4rem;
-            text-decoration: none;
-            text-shadow: 0 1px 1px black;
+        img {
+            width: 20rem;
         }
     }
+
     ul {
         display: flex;
         list-style: none;

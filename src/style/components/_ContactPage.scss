@@ -1,0 +1,58 @@
+.contactContainer {
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+    
+    .formContact {
+        font-size: 4rem;
+        padding: 1rem;
+        background-color: $color_backgraund5;
+        border-radius: 1rem;
+
+        .divContact {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                color: $color_1;
+                text-shadow: 0 1px 1px black;
+                font-weight: 900;
+                margin: 0.5rem;
+            }
+            input {
+                border-radius: 0.5rem;
+                border: none;
+                font-size: 2rem;
+                &:focus {
+                    box-shadow: 0 0 10px blue;
+                    outline: none;
+                }
+            }
+
+            textarea{
+                width: 300px;
+                height: 150px;
+                padding: 10px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                resize: vertical;
+                &:focus {
+                    box-shadow: 0 0 10px blue;
+                    outline: none;
+                }
+            }
+
+            button {
+                border: none;
+                margin-top: 1rem;
+                color: $color_1;
+                background-color: $color_backgraund3;
+
+                &:hover {
+                    background-color: $color_backgraund1;
+                }
+            }
+        }
+    }
+}

@@ -8,24 +8,25 @@ import PlaceIcon from '@mui/icons-material/Place';
 import { Link } from 'react-router-dom';
 
 
-const Footer = ({logo}) => {
+const Footer = () => {
     return (
         <div className='footerContainer'>
             <div className='containerFooter'>
                 <div className="logoFooter">
-                    <img src={logo} alt="logo de ecosound"/>
-                    <h4>EcoSound</h4>
+                    <Link to="/">
+                        <img src="./logo/eco-sound.png" alt="logo de ecosound"/>
+                    </Link>
                 </div>
                 <div className='linkContainer'>
                     <h3>Links</h3>
                     <ul className="links">
-                        <Link>Home</Link>
-                        <Link>Collection</Link>
-                        <Link>Contact</Link>
+                        <Link to="/">Inicio</Link>
+                        <Link to="/collection">Coleccion</Link>
+                        <Link to="/contact">Contacto</Link>
                     </ul>
                 </div>
                 <div className='redContainer'>
-                    <h3>Networks</h3>
+                    <h3>Redes sociales</h3>
                     <div className="redSocial">
                         <a href="https://facebook.com"><FacebookIcon style={{fontSize: "2rem"}}/></a>
                         <a href="https://instagram.com"><InstagramIcon style={{fontSize: "2rem"}}/></a>
@@ -48,7 +49,7 @@ const Footer = ({logo}) => {
                 </div>
             </div>
             <div style={{display: "flex", justifyContent: "center", fontSize: "2rem", marginTop: "1rem"}}>
-                <h6 style={{textShadowL: "0 1px 1px black"}}>© All rights reserved 2023</h6>
+                <h6 style={{textShadowL: "0 1px 1px black"}}>©Todos los derechos reservados 2023</h6>
             </div>
         </div>
     );

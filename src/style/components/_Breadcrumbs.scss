@@ -1,0 +1,22 @@
+.breadCrumbs {
+    font-size: 2rem;
+    margin: 1rem;
+
+    .crumb {
+        &::after{
+            content: '>';
+            margin-right: 1rem; 
+        }
+        &:last-child::after {
+            display: none;
+        }
+        a {
+            color: $color_4;
+        }
+    }
+}
+
+.breadCrumbs > * {
+    display: inline-block;
+    margin-right: 3rem;
+}

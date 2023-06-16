@@ -1,7 +1,74 @@
 .detailContainer {
-    padding: 2rem;
+    padding: 3rem;
     display: flex;
     font-size: 4rem;
+
     justify-content: space-evenly;
     color: $color_4;
+
+    .imgDetail{
+        margin: 2rem;
+        border: solid 1px grey;
+        border-radius: 1rem;
+        padding: 1rem;
+
+        img {
+            width: 40rem;
+        }
+    }
+
+    .DetailText {
+        h3{
+            font-size: 3rem;
+        }
+
+        .price {
+            font-size: 3rem;
+        }
+
+        .detailProduct{
+            font-size: 3rem;
+            p {
+                font-size: 2rem;
+                margin: 0.5rem;
+            }
+        }
+    }
+
+    .detailPrice {
+        border: 1px solid $color_4;
+        border-radius: 1rem;
+        padding: 1rem;
+        width: 150px;
+
+        .send{
+            color: $color_5;
+            font-size: 3rem;
+            margin: 1rem;
+        }
+        .sales{
+            margin: 1rem;
+            span{
+                color: $color_2;
+                font-size: 2rem;
+            }
+        }
+
+        .sendButton{
+            border: none;
+            margin: 0.3rem;
+            border-radius: 1rem;
+            color: $color_1;
+            background-color: $color_backgraund3;
+            padding: 1rem;
+        }
+        .cartButton {
+            margin: 0.3rem;
+            border: none;
+            border-radius: 1rem;
+            color: $color_backgraund3;
+            background-color: $color_backgraund4;
+            padding: 1rem;
+        }
+    }
 }
