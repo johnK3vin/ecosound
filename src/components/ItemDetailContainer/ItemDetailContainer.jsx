@@ -1,9 +1,11 @@
 import data from '../../data/data.json';
 import { useParams } from "react-router-dom";
 
-const DetailPages = () => {
+const ItemDetailContainer = () => {
 
     const {id} = useParams();
+
+    console.log(id)
 
     const producto =  data.filter((items)=>{
         return items.id === id;
@@ -46,4 +48,4 @@ const DetailPages = () => {
     );
 }
 
-export default DetailPages;
+export default ItemDetailContainer;

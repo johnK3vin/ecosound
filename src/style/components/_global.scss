@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
+
 $color_1: white;
 $color_2: red;
 $color_3: #D8C4B6;
@@ -10,6 +12,7 @@ $color_backgraund4: #AFD3E2;
 $color_backgraund5: #4F709C;
 
 * {
+    font-family: 'Noto Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;

@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import CardUser from "../../components/CardUser/CardUser";
 import data from '../../data/data.json';
 
-const CategoryPage = () => {
+const Category = () => {
 
     const { categoryId } = useParams();
 
@@ -17,7 +17,7 @@ const CategoryPage = () => {
         {producto.map((dato)=> {
             return (
                 <div key={dato.id}>
-                    <Link to={`detail/${dato.id}`}>
+                    <Link to={`/detail/${dato.id}`}>
                         <CardUser dato= {dato}/>
                     </Link>
                 </div>
@@ -27,4 +27,4 @@ const CategoryPage = () => {
     );
 }
 
-export default CategoryPage;
+export default Category;

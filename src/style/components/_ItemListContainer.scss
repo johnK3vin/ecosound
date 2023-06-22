@@ -1,4 +1,11 @@
 .itemContainer {
     padding: 1rem;
     background-color: $color_backgraund2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    a {
+        text-decoration: none;
+        font-size: 2rem;
+    }
 }

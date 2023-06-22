@@ -8,13 +8,12 @@ import Footer from './components/Footer/Footer';
 import './style/style.scss';
 
 
-
 //page
 import CollectionPage from './pages/CollectionPage/CollectionPage';
 import HomePage from './pages/HomePage/HomePage';
 import ContactPage from './pages/ContacPage/ContactPage';
-import DetailPages from './pages/DetailPage/DetailPage';
-import CategoryPage from './pages/CategoryPage/CategoryPage';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Category from './components/Category/Category';
 
 
 
@@ -27,8 +26,8 @@ function App() {
           <Route path='/' element={<HomePage/>}/>
           <Route path='/collection' element={<CollectionPage/>}/>
           <Route path='/contact' element={<ContactPage/>}/>
-          <Route path='/detail/:id' element={<DetailPages/>}/>
-          <Route path='/category/:categoryId' element={<CategoryPage/>}/>
+          <Route path='/detail/:id' element={<ItemDetailContainer/>}/>
+          <Route path='/category/:categoryId' element={<Category/>}/>
         </Routes>
         <div className="collectionLinks">
             <Link to='/category/Audifono Professional'>
