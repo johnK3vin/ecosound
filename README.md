@@ -1,4 +1,17 @@
-# ecosound
-# Proyecto para Coder House, sobre un e-commerce. Este proyecto se vasa en el uso de ventas de audifonos
+# ECOSOUND
 
-#en este proyecto esta hecho con Vite en su totalidad, para poder ejecutar el codigo se debe instalar la librerias de MUI, Axios, React-router-dom y Sass Bootstrap para poder correr el proyecto
+Live: https://delicate-griffin-2651ee.netlify.app/
+
+Repo: https://github.com/johnK3vin/ecosound
+
+
+# Se debe entregar.
+### Rutas a configurar
+- ‘/’ navega a <ItemListContainer />
+- ‘/category/:id’  <ItemListContainer />
+- ‘/detail/:id’ navega a <ItemDetailContainer />
+
+### Links a configurar
+- Clickear en el Home debe navegar a ‘/’
+- Clickear un Item debe navegar a /detail/:id
+- Clickear en una categoría que solo son 2 (inalambrico o professional)/category/:categoryId 
