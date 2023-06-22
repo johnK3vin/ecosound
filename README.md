@@ -1,7 +1,5 @@
 # ECOSOUND
 
-Live: https://delicate-griffin-2651ee.netlify.app/
-
 Repo: https://github.com/johnK3vin/ecosound
 
 
