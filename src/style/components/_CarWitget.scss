@@ -1,31 +1,8 @@
 .basketContainer {
     padding: 2rem;
-    margin: 2rem;
     font-size: 2rem;
 
-    &:hover .cartVertical {
-        display: block;
-    }
-
-    .cartVertical {
-        border-radius: 2px;
-        box-shadow: 0 1px 2px black;
-        position: absolute;
-        display: none;
-        list-style: none;
-        width: 300px;
-        background-color: $color_2;
-        padding: 10px;
-
-        .tableCart thead th{
-            font-size: 1.2rem;
-            padding: 0.5rem;
-        }
-        .tableCart tbody td a {
-            height: 2rem;
-        }
-        .tableCart tbody td img {
-            width: 1.5rem;
-        }
+    .imgCarrito {
+        font-size: 3rem;
     }
 }

@@ -5,15 +5,15 @@ const HomePage = () => {
     return (
         <div>
             <div id="carouselExampleRide" className="carousel slide" data-bs-ride="true" style={{margin: "0"}}>
-                <div className="carousel-inner">
+                <div className="carousel-inner" style={{position: 'relative', zIndex: 1}}>
                     <div className="carousel-item active">
-                        <img src="./carusel/1.png" className="d-block w-100" alt="..."/>
+                        <img src="./carusel/1.png" className="imgCarusel" alt="imagen de carrusel"/>
                     </div>
                     <div className="carousel-item">
-                        <img src="./carusel/2.png" className="d-block w-100" alt="..."/>
+                        <img src="./carusel/2.png" className="imgCarusel" alt="imagen de carrusel"/>
                     </div>
                     <div className="carousel-item">
-                        <img src="./carusel/3.png" className="d-block w-100" alt="..."/>
+                        <img src="./carusel/3.png" className="imgCarusel" alt="imagen de carrusel"/>
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">

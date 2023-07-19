@@ -1,49 +1,92 @@
-import data from '../../data/data.json';
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useEffect, useState, useContext } from "react";
+import { dataContext } from "../Context/Context";
+//fireBase
+import { collection, query, where, getDocs, documentId } from "firebase/firestore";
+import { db } from "../../fireBase/fireBase";
 
 const ItemDetailContainer = () => {
+    const { id } = useParams();
+    const [loader, setLoader] = useState(false);
+    const [dato, setDato] = useState([]);
+    const { sendCart } = useContext(dataContext);
+    const { img, name, type, description, detail, price } = dato;
 
-    const {id} = useParams();
+    //efecto de carga
+    useEffect(() => {
+        setTimeout(() => {
+            setLoader(true);
+        }, 1000);
+    }, []);
 
-    console.log(id)
+    //traer el producto segun su id 
+    useEffect(() => {
+        const getProduct = async () => {
+            const q = query(
+                collection(db, "product"),
+                where(documentId(), "==", id)
+            );
+            const docs = [];
+            const querySnapshot = await getDocs(q);
+            querySnapshot.forEach((doc) => {
+                docs.push({ ...doc.data(), id: doc.id });
+            });
+            //me tiraba error al solo poner DOCS asi que puse que me agregara el primer indice
+            setDato(docs[0]);
+        };
+        getProduct();
+    }, [id]);
 
-    const producto =  data.filter((items)=>{
-        return items.id === id;
-    })
 
     return (
-        <div className="detailContainer">
-            <div className="imgDetail">
-                <img src={producto[0].img} alt="imagen de producto" />
-            </div>
-            <div className="DetailText">
-                <div>
-                    <h3>{producto[0].name}</h3>
-                    <h2>{producto[0].type}</h2>
+        <div>
+            {loader ? (
+                <div className="detailContainer">
+                    <div className="imgDetail">
+                        <img src={img} alt="imagen de producto" />
+                    </div>
+                    <div className="DetailText">
+                        <div>
+                            <h3>{name}</h3>
+                            <h2>{type}</h2>
+                        </div>
+                        <div className='price'>
+                            <span>Precio: ${price}</span>
+                        </div>
+                        <div className='detailProduct'>
+                            <div><p>Descripcion:</p></div>
+                            <div style={{ fontSize: '1.5rem', width:'400px' }}>{description}</div>
+                            <div><p>Caracteristicas:</p></div>
+                            <ul id="myList">
+                                {detail ? (
+                                    dato.detail.map((item, index) => (
+                                        <li key={index}>{item}</li>
+                                    ))
+                                ) : (
+                                    <li>Cargando...</li>
+                                )}
+                            </ul>
+                        </div>
+                    </div>
+                    <div className='detailPrice'>
+                        <div className='send'>
+                            <p>Envio gratis</p>
+                        </div>
+                        <div className='sales'>
+                            <p>Tienda oficial <span>EcoSound</span></p>
+                            <p>+1000 ventas</p>
+                        </div>
+                        <div >
+                            <Link to='/cart' className='sendButton' onClick={() => sendCart(dato)}>comprar ahora</Link>
+                            <Link className='sendButton' onClick={() => sendCart(dato)}>agregar carrito</Link>
+                        </div>
+                    </div>
                 </div>
-                <div className='price'>
-                    <span>Precio: ${producto[0].price}</span>
+            ) : (
+                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+                    <img src='/loader/XVo6.gif' alt="imagen de carga" style={{ width: '200px' }} />
                 </div>
-                <div className='detailProduct'>
-                    <div><p>Descripcion:</p></div>
-                    <div>{producto[0].description}</div>
-                    <div><p>Caracteristicas:</p></div>
-                    <div>{producto[0].detail}</div>
-                </div>
-            </div>
-            <div className='detailPrice'>
-                <div className='send'>
-                    <p>Envio gratis</p>
-                </div>
-                <div className='sales'>
-                    <p>Tienda oficial <span>EcoSound</span></p>
-                    <p>+1000 ventas</p>
-                </div>
-                <div>
-                    <button className='sendButton'>comprar ahora</button>
-                    <button className='cartButton'>agregar carrito</button>
-                </div>
-            </div>
+            )}
         </div>
     );
 }

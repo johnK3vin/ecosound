@@ -1,0 +1,14 @@
+.erroPage-container{
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-image: url('/public/error/pantalla-rota.jpg');
+}
+
+@media (max-width: 700px){
+    .erroPage-container{
+        flex-direction: column;
+        justify-content: center;
+    }
+}

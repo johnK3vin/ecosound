@@ -1,8 +1,12 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 //components
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
+import Context from './components/Context/Context';
+import Category from './components/Category/Category';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import CartContent from './components/Cart/CartContent';
 
 //sass
 import './style/style.scss';
@@ -12,13 +16,14 @@ import './style/style.scss';
 import CollectionPage from './pages/CollectionPage/CollectionPage';
 import HomePage from './pages/HomePage/HomePage';
 import ContactPage from './pages/ContacPage/ContactPage';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import Category from './components/Category/Category';
+import ErrorPage from './pages/ErrorPage/ErrorPage';
+
 
 
 
 function App() {
-  return (  
+  return (
+    <Context>
     <BrowserRouter>
       <div className='App'>
         <NavBar/>
@@ -28,18 +33,13 @@ function App() {
           <Route path='/contact' element={<ContactPage/>}/>
           <Route path='/detail/:id' element={<ItemDetailContainer/>}/>
           <Route path='/category/:categoryId' element={<Category/>}/>
+          <Route path='/cart' element={<CartContent/>}/>
+          <Route path='*' element={<ErrorPage/>}/>
         </Routes>
-        <div className="collectionLinks">
-            <Link to='/category/Audifono Professional'>
-              Audifonos Professionales
-            </Link>
-            <Link to='/category/Audifono Inalambrico'>
-                Audifonos Inalambricos
-            </Link>
-        </div>
         <Footer/>
       </div>
     </BrowserRouter>
+    </Context>
   )
 }
 

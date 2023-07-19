@@ -1,12 +1,35 @@
 .collectionLinks {
+  display: flex;
+  justify-content: center;
+  a {
+    font-size: 2rem;
+    text-decoration: none;
+    background-color: $color_backgraund1;
+    padding: 1rem;
+    color: $color_1;
+    margin-left: 0.5rem;
+  }
+}
+
+.collection-category{
     display: flex;
     justify-content: center;
-    a {
-        font-size: 2rem;
-        text-decoration: none;
-        background-color: $color_backgraund1;
-        padding: 1rem;
-        color: $color_1;
-        margin-left: 0.5rem;
-    }
+    align-items: center;
+    font-size: 2rem;
+    margin: 2rem;
+}
+
+.button-link {
+    margin: .7rem;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #337ab7;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: #23527c;
+  }
 }

@@ -11,9 +11,9 @@ const CardUser = ({dato}) => {
   const {img, name, price } = dato;
 
   return (
-        <Card className='card' sx={{ maxWidth: 345 }}> 
+        <Card className='card'> 
           <CardActionArea>
-            <CardMedia
+            <CardMedia className='cardMedia'
             component="img"
             height="200"
             image= {img}

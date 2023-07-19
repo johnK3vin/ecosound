@@ -14,11 +14,10 @@ const Footer = () => {
             <div className='containerFooter'>
                 <div className="logoFooter">
                     <Link to="/">
-                        <img src="./logo/eco-sound.png" alt="logo de ecosound"/>
+                        <img src="/logo/eco-sound.png" alt="logo de ecosound"/>
                     </Link>
                 </div>
                 <div className='linkContainer'>
-                    <h3>Links</h3>
                     <ul className="links">
                         <Link to="/">Inicio</Link>
                         <Link to="/collection">Coleccion</Link>

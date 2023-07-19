@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 $color_1: white;
 $color_2: red;
@@ -10,9 +10,12 @@ $color_backgraund2: #F5EFE7;
 $color_backgraund3: #19A7CE;
 $color_backgraund4: #AFD3E2;
 $color_backgraund5: #4F709C;
+$color_backgraund6: #56afc7;
+$color_backgraund7: #007bff;
+$color_backgraund8: #0056b3;
 
 * {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
