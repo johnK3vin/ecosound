@@ -36,6 +36,7 @@ const initialState = {
 
 const CartContent = () => {
   const [loader, setLoader] = useState(false);
+  const [loaderB, setLoaderB] = useState(false);
   const { cart } = useContext(dataContext);
   const [values, setValues] = useState(initialState);
   const [modal, setModal] = useState(false);
@@ -77,9 +78,11 @@ const CartContent = () => {
         values,
       });
       //efecto de carga
+      setLoaderB(!loaderB);
       setTimeout(() => {
-        setId(docRef.id)
-        setLoader(true);
+        setId(docRef.id);
+        setLoader(!loader);
+        setLoaderB(false);
         setValues(initialState);
       }, 3000);
     }
@@ -123,8 +126,11 @@ const CartContent = () => {
                   {loader ? `Su pedido a sido realizado! Por favor guardar el siguiente codigo: ${id}` : (
                     null
                   )}
+                  {loaderB ? <img src="/loader/XVo6.gif" alt="imagen de carga" style={{width:'20px'}}/> : (
+                    null
+                  )}
                 </div>
-                <Button variant="contained"  onClick={onSubmit}>Comprar</Button>
+                { loader ? null : <Button variant="contained"  onClick={onSubmit}>Comprar</Button>}
                 <Button onClick={() => {
                   setValues(initialState)
                   handleClose()
@@ -139,7 +145,7 @@ const CartContent = () => {
     <div style={{height:'50%', margin: '2rem', textAlign:'center'}}>
       <h1>Mi Carrito Esta Vacio</h1>
       <div>
-        <img src="/cart/empty_cart.png" alt="" />
+        <img src="/cart/empty_cart.png" alt="carrito vacio" />
       </div>
     </div>
   )

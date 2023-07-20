@@ -77,3 +77,39 @@
     }
   }
 }
+
+@media (max-width: 700px ){
+  .detailContainer{
+    padding: 0;
+    flex-flow: row wrap;
+    height: 100%;
+  }
+
+    .detailTitle{
+      h3{
+        font-size: 0.3rem;
+      }
+    }
+
+    .detailPrice {
+      border: 1px solid $color_4;
+      border-radius: 1rem;
+      padding: 0.3rem;
+      width: 70px;
+  
+      .send {
+        font-size: 1rem;
+        margin: 0.5rem;
+      }
+      .sales {
+        margin: 0.5rem;
+        span {
+          font-size: 1rem;
+        }
+      }
+  
+      .sendButton {
+        padding: 5px 10px;
+      }
+    }
+}

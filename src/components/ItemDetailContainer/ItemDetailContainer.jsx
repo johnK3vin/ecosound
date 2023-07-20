@@ -46,7 +46,7 @@ const ItemDetailContainer = () => {
                         <img src={img} alt="imagen de producto" />
                     </div>
                     <div className="DetailText">
-                        <div>
+                        <div className="detailTitle">
                             <h3>{name}</h3>
                             <h2>{type}</h2>
                         </div>

@@ -78,3 +78,50 @@
         margin: 20px;
     }
 }
+
+@media (max-width: 700px) {
+    .cartContainer {
+        padding: 2rem;
+        font-size: 2rem;
+    }
+
+    .cart-header h3 {
+        margin: 1rem;
+    }
+
+    .cart-body {
+        margin: 1rem;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        img {
+            width: 100px;
+        }
+    }
+
+    .cart-buy {
+        flex-direction: column-reverse;
+        .after-buy,
+        .ready-buy {
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            margin: 0.5rem;
+            text-align: center;
+        }
+    }
+
+    .total {
+        font-size: 2rem;
+    }
+
+    .cart-repeat button {
+        font-size: 1rem;
+        width: 1.5rem;
+    }
+
+    .cart-repeat span {
+        font-size: 0.8rem;
+        width: 15px;
+        margin: 10px;
+    }
+}

@@ -1,71 +1,108 @@
 .containerFooter {
-    color: $color_1;
-    font-size: 5rem;
-    display: flex;
-    padding: 2rem;
-    justify-content: space-evenly;
+  color: $color_1;
+  font-size: 5rem;
+  display: flex;
+  padding: 2rem;
+  justify-content: space-evenly;
 
-    .logoFooter {
-        align-items: center;
-        img {
-            width: 20rem;
-        }
+  .logoFooter {
+    align-items: center;
+    img {
+      width: 20rem;
     }
+  }
 
-    .linkContainer {
-        margin: 1rem;
-        .links {
-            display: flex;
-            font-size: 3rem;
-            margin: 1rem;
-            a { 
-                margin: 0.5rem;
-                color: $color_1;
-                text-decoration: none;
-                text-shadow: 0 1px 1px black;
-                &:hover {
-                    color: $color_3;
-                    text-decoration:underline;
-                }
-            }
+  .linkContainer {
+    margin: 1rem;
+    .links {
+      display: flex;
+      font-size: 3rem;
+      margin: 1rem;
+      a {
+        margin: 0.5rem;
+        color: $color_1;
+        text-decoration: none;
+        text-shadow: 0 1px 1px black;
+        &:hover {
+          color: $color_3;
+          text-decoration: underline;
         }
+      }
     }
+  }
 
-    .redContainer {
-        margin: 1rem;
-        .redSocial {
-            display: flex;
-            a {
-                color: $color_1;
-                margin: 0.5rem;
+  .redContainer {
+    margin: 1rem;
+    .redSocial {
+      display: flex;
+      a {
+        color: $color_1;
+        margin: 0.5rem;
 
-                &:hover {
-                    color: $color_3;
-                }
-            } 
+        &:hover {
+          color: $color_3;
         }
+      }
     }
+  }
 }
 
 .footerContainer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    background-color: $color_backgraund1;
-    color: $color_1;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: $color_backgraund1;
+  color: $color_1;
 
-    .contactFooter {
-        display: flex;
-        justify-content: center;
-        div {
-            display: flex;
-            align-items: center;
-            margin: 1rem;
-            font-size: 2rem;
+  .contactFooter {
+    display: flex;
+    justify-content: center;
+    div {
+      display: flex;
+      align-items: center;
+      margin: 1rem;
+      font-size: 2rem;
 
-            span {
-                margin-left: 0.5rem;
-            }
-        }
+      span {
+        margin-left: 0.5rem;
+      }
     }
+  }
+}
+
+@media (max-width: 700px) {
+
+  .logoFooter{
+    width: 100px;
+    a{
+      width: 10px;
+    }
+  }
+
+  .links {
+    a{
+      font-size: 1rem;
+    }
+  }
+
+  .redContainer{
+    margin: 0.3rem;
+    height: 50px;
+    h3{
+      font-size: 1rem;
+    }
+    .redSocial{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .contactFooter {
+    display: flex;
+    flex-direction: column;
+    div {
+      font-size: 0.3rem;
+      margin: 0.2rem;
+    }
+  }
 }
