@@ -13,8 +13,8 @@ Repo: https://github.com/johnK3vin/ecosound
 - vite instalado
 
 ### EcoSound
-- Tienda de venta de audifono en el cual podras navegar por los productos, podras ver los detalles de estos, podras revisar la categoria que se encuentra en la tienda, podras agregar los productos al carrito para poder realizar un pedido de los audifonos que te gustaron.
-- Para poder realizar el pedido es necesario tener los campos rellenados, los email deben coinsidir para poder finalizar el pedido. 
-- Reciviras un codigo que debe ser guardado por el usuario para poder hacer seguimiento del pedido realizado.
+-Tienda de venta de audífono en el cual podrás navegar por los productos, podrás ver los detalles de estos, podrás revisar la categoría que se encuentra en la tienda, podrás agregar los productos al carrito para poder realizar un pedido de los audífonos que te gustaron.
+-Para poder realizar el pedido es necesario tener los campos rellenados, el email deben coincidir para poder finalizar el pedido.
+-Recibirás un código que debe ser guardado por el usuario para poder hacer seguimiento del pedido realizado.
 
 
